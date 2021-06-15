@@ -23,3 +23,14 @@ add below this file into your autoload files or index.php files<br>
      $offset = ($pageno-1)*$no_of_records_per_page;
 
   </pre>
+  <p>Next part is only add below code after your table creation</p>
+  <pre>
+        //redirect with page link
+        
+        pagination::drawPagination($pageno,$countPage,$no_of_records_per_page,$pageUrl); 
+        
+        //OR//
+        //use it when you have to call ajax on every single click
+        
+        pagination::drawScriptPagination($pageno,$countPage,$no_of_records_per_page,$pageUrl); 
+  </pre>
